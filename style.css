@@ -1,0 +1,125 @@
+*{
+    background-color:skyblue
+}
+h1{
+    font-weight: bold;
+    color:black;
+}
+#info{
+    width:300px;
+    height:30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color:black;
+    padding:5px;
+}
+#btn{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    font-size:16px ;
+    font-weight: bold;
+    background-color: yellowgreen;
+    color: black;
+    padding: 5px;
+    margin-top: 1%;
+}
+li{
+    font-size: 18px;
+    color: darkblue;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 7px;
+}
+/* First button inside li → Done */
+li button:first-of-type {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+li button:first-of-type:hover {
+    background-color: #45a049;
+}
+
+/* Second button inside li → Delete */
+li button:last-of-type {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+li button:last-of-type:hover {
+    background-color: #d32f2f;
+}
+/* Style for the task list container */
+ul {
+    counter-reset: task-counter; /* Reset counter */
+    padding-left: 0;
+}
+
+/* Style for each task item */
+li {
+    list-style: none; /* Remove default bullet */
+    counter-increment: task-counter; /* Increase counter for each li */
+    background-color: white; /* White background for task */
+    padding: 8px 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between number, text, and buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add numbering before each li */
+li::before {
+    content: counter(task-counter) ".";
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Task text style */
+li span {
+    flex: 1;
+}
+
+/* Done button */
+li button:first-of-type {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li button:first-of-type:hover {
+    background-color: #45a049;
+}
+
+/* Delete button */
+li button:last-of-type {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li button:last-of-type:hover {
+    background-color: #d32f2f;
+}
